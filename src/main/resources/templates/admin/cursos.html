@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Admin Cursos</title></head>
+<body>
+<h2>Panel de Administración - Cursos</h2>
+<form th:action="@{/admin/cursos}" method="post">
+    <input type="text" name="nombre" placeholder="Nombre Curso"/>
+    <input type="text" name="descripcion" placeholder="Descripcion"/>
+    <button type="submit">Agregar Curso</button>
+</form>
+<ul>
+    <li th:each="curso : ${cursos}" th:text="${curso.nombre} + ' - ' + ${curso.descripcion}"></li>
+</ul>
+</body>
+</html>
