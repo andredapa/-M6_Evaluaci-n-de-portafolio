@@ -1,5 +1,7 @@
 package com.skillnest.web.repository;
 
-public class CursoRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
 
-}
+import com.skillnest.web.model.Curso;
+
+public interface CursoRepository extends JpaRepository<Curso, Long> {}
